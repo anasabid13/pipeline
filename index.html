@@ -1,99 +1,452 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Pro | Portfolio</title>
+
+  <meta charset="UTF-8">
+
+  <title>Brick Breaker 🧱</title>
+
+
+
+  <style>
+
+    body {
+
+      margin: 0;
+
+      background: #020617;
+
+      color: white;
+
+      font-family: Arial, sans-serif;
+
+      text-align: center;
+
+    }
+
+
+
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <style>
-        body { background-color: #0f172a; color: #f8fafc; }
-        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
-        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .nav-link { color: #94a3b8 !important; transition: 0.3s; }
-        .nav-link:hover { color: #38bdf8 !important; }
-    </style>
+
+    h1 {
+
+      margin: 8px 0;
+
+      color: #facc15;
+
+    }
+
+
+
+    #info {
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 30px;
+
+      margin-bottom: 5px;
+
+      font-size: 1.1rem;
+
+    }
+
+
+
+    canvas {
+
+      background: #020617;
+
+      display: block;
+
+      margin: auto;
+
+      border: 2px solid #facc15;
+
+    }
+
+  </style>
+
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-lg sticky-top glass py-3">
-        <div class="container">
-            <a class="navbar-brand font-bold text-2xl gradient-text" href="#">DEV.LOG</a>
-            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav gap-4">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-info rounded-pill px-4" href="mailto:your@email.com">Hire Me</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <section id="home" class="container min-vh-100 d-flex align-items-center">
-        <div class="row items-center">
-            <div class="col-lg-7">
-                <h1 class="text-6xl font-extrabold mb-4">Hi, I'm <span class="gradient-text">Your Name</span></h1>
-                <p class="text-xl text-slate-400 mb-8 leading-relaxed">
-                    A DevOps & Cloud Specialist dedicated to automating workflows, 
-                    optimizing Jenkins pipelines, and scaling infrastructure with code.
-                </p>
-                <div class="flex gap-4">
-                    <button class="bg-sky-500 hover:bg-sky-600 px-8 py-3 rounded-lg font-bold transition">View GitHub</button>
-                    <button class="glass px-8 py-3 rounded-lg font-bold hover:bg-slate-800 transition" data-bs-toggle="modal" data-bs-target="#contactModal">Get In Touch</button>
-                </div>
-            </div>
-            <div class="col-lg-5 mt-5 mt-lg-0 text-center">
-                <div class="inline-block p-2 rounded-full border-2 border-dashed border-sky-500 animate-spin-slow">
-                    <img src="https://via.placeholder.com/300" class="rounded-full shadow-2xl shadow-sky-500/20" alt="Profile">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="projects" class="container py-20">
-        <h2 class="text-4xl font-bold mb-12 text-center">Featured <span class="text-sky-400">Projects</span></h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="glass p-6 rounded-2xl hover:-translate-y-2 transition duration-300">
-                    <div class="text-sky-400 text-3xl mb-4"><i class="bi bi-gear"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Jenkins CI/CD Pipeline</h3>
-                    <p class="text-slate-400 text-sm mb-4">Automated deployment of containerized apps to AWS EC2 using Docker and Jenkins.</p>
-                    <div class="flex gap-2 mb-4">
-                        <span class="bg-slate-800 text-[10px] px-2 py-1 rounded">GROOVY</span>
-                        <span class="bg-slate-800 text-[10px] px-2 py-1 rounded">DOCKER</span>
-                    </div>
-                    <a href="#" class="text-sky-400 font-semibold flex items-center gap-2">Read Case Study &rarr;</a>
-                </div>
-            </div>
-            </div>
-    </section>
+  <h1>Brick Breaker</h1>
 
-    <div class="modal fade" id="contactModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content bg-slate-900 border border-slate-700">
-                <div class="modal-header border-slate-800">
-                    <h5 class="modal-title font-bold">Send a Message</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body p-4">
-                    <form>
-                        <input type="text" placeholder="Name" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 mb-4 focus:ring-2 focus:ring-sky-500 outline-none">
-                        <textarea placeholder="Your Message" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 h-32 outline-none focus:ring-2 focus:ring-sky-500"></textarea>
-                    </form>
-                </div>
-                <div class="modal-footer border-slate-800">
-                    <button type="button" class="bg-sky-500 w-full py-3 rounded-lg font-bold">Send Message</button>
-                </div>
-            </div>
-        </div>
-    </div>
+  <div id="info">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <div id="timer">Time: 30</div>
+
+    <div id="score">Score: 0</div>
+
+  </div>
+
+
+
+  <canvas id="game" width="400" height="500"></canvas>
+
+
+
+  <script>
+
+    const canvas = document.getElementById("game");
+
+    const ctx = canvas.getContext("2d");
+
+    const timerText = document.getElementById("timer");
+
+    const scoreText = document.getElementById("score");
+
+
+
+    /* ===== GAME STATE ===== */
+
+    let timeLeft = 30;
+
+    let score = 0;
+
+    let gameRunning = true;
+
+
+
+    /* ===== TIMER ===== */
+
+    const timer = setInterval(() => {
+
+      if (!gameRunning) return;
+
+
+
+      timeLeft--;
+
+      timerText.textContent = "Time: " + timeLeft;
+
+
+
+      if (timeLeft <= 0) {
+
+        gameRunning = false;
+
+        clearInterval(timer);
+
+        setTimeout(() => {
+
+          alert("⏱️ Time up!\nFinal Score: " + score);
+
+          document.location.reload();
+
+        }, 100);
+
+      }
+
+    }, 1000);
+
+
+
+    /* ===== PADDLE ===== */
+
+    const paddle = {
+
+      w: 80,
+
+      h: 10,
+
+      x: 160,
+
+      y: 480,
+
+      speed: 6
+
+    };
+
+
+
+    /* ===== BALL ===== */
+
+    const ball = {
+
+      x: 200,
+
+      y: 250,
+
+      r: 6,
+
+      dx: 3,
+
+      dy: -3
+
+    };
+
+
+
+    /* ===== BRICKS ===== */
+
+    const rows = 4;
+
+    const cols = 6;
+
+    const bricks = [];
+
+    const brickW = 60;
+
+    const brickH = 20;
+
+    const padding = 10;
+
+
+
+    for (let r = 0; r < rows; r++) {
+
+      bricks[r] = [];
+
+      for (let c = 0; c < cols; c++) {
+
+        bricks[r][c] = { x: 0, y: 0, hit: false };
+
+      }
+
+    }
+
+
+
+    let right = false;
+
+    let left = false;
+
+
+
+    document.addEventListener("keydown", e => {
+
+      if (e.key === "ArrowRight") right = true;
+
+      if (e.key === "ArrowLeft") left = true;
+
+    });
+
+
+
+    document.addEventListener("keyup", e => {
+
+      if (e.key === "ArrowRight") right = false;
+
+      if (e.key === "ArrowLeft") left = false;
+
+    });
+
+
+
+    function drawPaddle() {
+
+      ctx.fillStyle = "#22c55e";
+
+      ctx.fillRect(paddle.x, paddle.y, paddle.w, paddle.h);
+
+    }
+
+
+
+    function drawBall() {
+
+      ctx.fillStyle = "#38bdf8";
+
+      ctx.beginPath();
+
+      ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2);
+
+      ctx.fill();
+
+    }
+
+
+
+    function drawBricks() {
+
+      for (let r = 0; r < rows; r++) {
+
+        for (let c = 0; c < cols; c++) {
+
+          if (!bricks[r][c].hit) {
+
+            const x = c * (brickW + padding) + 30;
+
+            const y = r * (brickH + padding) + 40;
+
+            bricks[r][c].x = x;
+
+            bricks[r][c].y = y;
+
+
+
+            ctx.fillStyle = "#ef4444";
+
+            ctx.fillRect(x, y, brickW, brickH);
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    function collision() {
+
+      for (let r = 0; r < rows; r++) {
+
+        for (let c = 0; c < cols; c++) {
+
+          const b = bricks[r][c];
+
+          if (!b.hit) {
+
+            if (
+
+              ball.x > b.x &&
+
+              ball.x < b.x + brickW &&
+
+              ball.y > b.y &&
+
+              ball.y < b.y + brickH
+
+            ) {
+
+              ball.dy *= -1;
+
+              b.hit = true;
+
+              score++;
+
+              scoreText.textContent = "Score: " + score;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    function resetBall() {
+
+      ball.x = canvas.width / 2;
+
+      ball.y = 250;
+
+      ball.dx = 3;
+
+      ball.dy = -3;
+
+    }
+
+
+
+    function update() {
+
+      if (!gameRunning) return;
+
+
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+
+
+      drawPaddle();
+
+      drawBall();
+
+      drawBricks();
+
+      collision();
+
+
+
+      // Paddle move
+
+      if (right && paddle.x < canvas.width - paddle.w)
+
+        paddle.x += paddle.speed;
+
+      if (left && paddle.x > 0)
+
+        paddle.x -= paddle.speed;
+
+
+
+      // Ball move
+
+      ball.x += ball.dx;
+
+      ball.y += ball.dy;
+
+
+
+      // Wall collision
+
+      if (ball.x < ball.r || ball.x > canvas.width - ball.r)
+
+        ball.dx *= -1;
+
+      if (ball.y < ball.r)
+
+        ball.dy *= -1;
+
+
+
+      // Paddle collision
+
+      if (
+
+        ball.y > paddle.y &&
+
+        ball.x > paddle.x &&
+
+        ball.x < paddle.x + paddle.w
+
+      ) {
+
+        ball.dy *= -1;
+
+      }
+
+
+
+      // Ball missed → reset (NO game over)
+
+      if (ball.y > canvas.height) {
+
+        resetBall();
+
+      }
+
+
+
+      requestAnimationFrame(update);
+
+    }
+
+
+
+    update();
+
+  </script>
+
+
+
 </body>
+
 </html>
+
+
+
